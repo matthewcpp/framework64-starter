@@ -3,9 +3,9 @@ cmake_minimum_required(VERSION 3.16)
 include(lib/framework64/cmake/configure_platform.cmake REQUIRED)
 
 if (FW64_PLATFORM_N64)
-    project(minimal C)
+    project(starter C)
 else()
-    project(minimal)
+    project(starter)
 endif()
 
 add_subdirectory(lib/framework64)
