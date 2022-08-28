@@ -4,7 +4,7 @@
 #include "framework64/engine.h"
 #include "framework64/node.h"
 
-typedef struct lines_example {
+typedef struct {
     fw64Engine* engine;
     fw64Camera camera;
     float rotation;
