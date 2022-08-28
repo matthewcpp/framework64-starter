@@ -2,7 +2,19 @@
     "configurations": [
         {
             "name": "N64",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "includePath": [
+                "/usr/include/n64",
+                "/usr/include/n64/nusys",
+                "/usr/include/n64/nustd",
+                "${workspaceFolder}/lib/framework64/include",
+                "${workspaceFolder}/build_n64/bin/spooky/assets/include",
+                "${workspaceFolder}/src/**"
+                
+            ],
+            "defines": [
+                "_LANGUAGE_C",
+                "PLATFORM_N64"
+            ]
         },
         {
             "name": "Desktop",
