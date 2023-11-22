@@ -1,5 +1,5 @@
 #include "game.h"
-#include "assets.h"
+#include "assets/assets.h"
 
 #include "framework64/n64/controller_button.h"
 
@@ -16,7 +16,7 @@ void game_init(Game* game, fw64Engine* engine) {
     fw64_camera_update_view_matrix(&game->camera);
 
     fw64_node_init(&game->node);
-    fw64_node_set_mesh(&game->node, fw64_mesh_load(engine->assets, FW64_ASSET_mesh_n64_logo, NULL));
+    fw64_node_set_mesh(&game->node, fw64_assets_load_mesh(engine->assets, FW64_ASSET_mesh_n64_logo, fw64_default_allocator()));
     vec3_set_all(&game->node.transform.scale, 0.1f);
 
     game->rotation = 0.0f;
@@ -30,7 +30,7 @@ void game_update(Game* game){
 }
 
 void game_draw(Game* game) {
-    fw64_renderer_begin(game->engine->renderer, FW64_RENDERER_MODE_TRIANGLES,  FW64_RENDERER_FLAG_CLEAR);
+    fw64_renderer_begin(game->engine->renderer, FW64_PRIMITIVE_MODE_TRIANGLES,  FW64_RENDERER_FLAG_CLEAR);
     fw64_renderer_set_camera(game->engine->renderer, &game->camera);
     fw64_renderer_draw_static_mesh(game->engine->renderer, &game->node.transform, game->node.mesh);
     fw64_renderer_end(game->engine->renderer, FW64_RENDERER_FLAG_SWAP);
