@@ -1,20 +1,20 @@
 {
     "configurations": [
         {
-            "name": "N64",
+            "name": "n64_libultra",
             "includePath": [
                 "/usr/include/n64",
                 "/usr/include/n64/nusys",
                 "/usr/include/n64/nustd",
                 "${workspaceFolder}/lib/framework64/include",
-                "${workspaceFolder}/build_n64/bin/spooky/assets/include",
+                "${workspaceFolder}/build_n64_libultra/bin/game/assets/include",
                 "${workspaceFolder}/src/**"
-                
             ],
             "defines": [
                 "_LANGUAGE_C",
-                "PLATFORM_N64"
-            ]
+                "FW64_PLATFORM_N64_LIBULTRA"
+            ],
+            "compileCommands": "${workspaceFolder}/build_n64_libultra/compile_commands.json"
         },
         {
             "name": "Desktop",
