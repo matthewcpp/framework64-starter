@@ -19,7 +19,7 @@
         }
     },
     "platform": {
-        "default": "desktop",
+        "default": "Desktop",
         "choices": {
             "desktop": {
                 "short": "Desktop",
@@ -30,11 +30,11 @@
                     "FW64_PLATFORM_DESKTOP": "ON"
                 }
             },
-            "n64": {
-                "short": "N64-libultra",
-                "long": "N64-libultra",
+            "n64_libultra": {
+                "short": "n64_libultra",
+                "long": "n64_libultra",
                 "settings": {
-                    "FW64_PLATFORM_N64": "ON"
+                    "FW64_PLATFORM_N64_LIBULTRA": "ON"
                 }
             }
         }
