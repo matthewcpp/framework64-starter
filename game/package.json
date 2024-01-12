@@ -2,8 +2,9 @@
   "name": "starter",
   "version": "0.0.1",
   "scripts": {
-    "prepare_assets": "node lib/framework64/scripts/PrepareGameAssets.js",
-    "configure_environment": "node lib/framework64/scripts/ConfigureGameEnvironment.js"
+    "prepare_assets": "node lib/framework64/scripts/PrepareGameAssets.js -p ./pipeline/plugins.json",
+    "configure_environment": "node lib/framework64/scripts/ConfigureGameEnvironment.js",
+    "create_pipeline_plugin": "node lib/framework64/scripts/CreatePipelinePlugin.js ./pipeline/plugins.json"
   },
   "dependencies": {
     "canvas": "^2.11.2",
