@@ -3,4 +3,5 @@ set(src_files
 
 create_game(
     TARGET starter
+    EXTRA_LIBS fw64_components
     SOURCES ${src_files})
