@@ -6,12 +6,11 @@
 
 #include "fw64_rotate_node.h"
 
-typedef struct lines_example {
+typedef struct {
     fw64Engine* engine;
     fw64RenderPass* renderpass;
     fw64RotateNode rotate_node;
     fw64Scene scene;
-    
 } Game;
 
 #ifdef __cplusplus
