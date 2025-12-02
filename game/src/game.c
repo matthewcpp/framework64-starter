@@ -39,6 +39,10 @@ void game_init(Game* game, fw64Engine* engine) {
     fw64_renderpass_set_camera(game->renderpass, &camera);
 }
 
+void game_fixed_update(Game* game) {
+    (void)game;
+}
+
 void game_update(Game* game){
     fw64_rotate_node_update(&game->rotate_node, game->engine->time->time_delta);
 }
